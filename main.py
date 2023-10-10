@@ -12,7 +12,8 @@ for freq in frequencies:
 
     harmonic_spectrum = np.fft.fft(harmonic_signal)
 
-    digital_spectrum = np.fft.fft(digital_signal)
+    digital_signal_for_spectrum = np.sign(np.sin(2 * np.pi * freq * t))
+    digital_spectrum = np.fft.fft(digital_signal_for_spectrum)
 
     plt.figure(figsize=(10, 5))
 
